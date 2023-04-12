@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>myJepordy</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <p class="score-plus-animation">+5</p>
+    <p class="bonus-plus-animation">Bonus +100</p>
+    <div class="question-container">
+      <div class="question Question1"><p class="topics"></p></div>
+      <div class="question question2"><p class="topics"></p></div>
+      <div class="question question3"><p class="topics"></p></div>
+      <div class="question question4"><p class="topics"></p></div>
+      <div class="question question5"><p class="topics"></p></div>
+      <div class="question question6"><p class="topics"></p></div>
+      <div class="question question7"><p class="topics"></p></div>
+      <div class="question question8"><p class="topics"></p></div>
+      <div class="question question9"><p class="topics"></p></div>
+    </div>
+    <div class="score-container">
+      <p class="score-text">SCORE</p>
+      <div class="score-itself-container">
+        <p class="score-itself">00</p>
+      </div>
+    </div>
+    <div class="hidden-question-div">
+      <p class="actual-question"></p>
+      <input
+        type="radio"
+        name="multiple-choice"
+        class="answers"
+        id="firstAnswer"
+      />
+      <label class="answerLabels" for="firstAnswer"></label><br />
+
+      <input
+        type="radio"
+        name="multiple-choice"
+        class="answers"
+        id="secondAnswer"
+      />
+      <label class="answerLabels" for="secondAnswer"></label><br />
+
+      <input
+        type="radio"
+        name="multiple-choice"
+        class="answers"
+        id="thirdAnswer"
+      />
+      <label class="answerLabels" for="thirdAnswer"></label><br />
+      <button id="submitButton">submit</button>
+    </div>
+    <audio id="correct-sound" src="sounds/ding-36029.mp3"></audio>
+    <audio id="bonus-sound" src="sounds/goodresult-82807.mp3"></audio>
+    <audio id="question-sound" src="sounds/going-to-the-next-level-114480.mp3"></audio>
+    <audio
+      id="error-sound"
+      src="sounds/error-call-to-attention-129258.mp3"
+    ></audio>
+    <audio
+      id="all-tiles-green-sound"
+      src="sounds/crowd-cheer-ii-6263.mp3"
+    ></audio>
+    <script src="javascript/code.js"></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+body {
+  background-color: #25274d;
+}
+.pointerEv {
+  pointer-events: none;
+}
+.question-container {
+  display: grid;
+  color: white;
+  border-radius: 14px;
+  font-size: 29px;
+  background-color: #2e9bca8f;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
+  gap: 7px 7px;
+  border: none;
+  box-shadow: 8px 2px 50px #2e9cca;
+  width: 1000px;
+  height: 700px;
+  grid-template-areas:
+    "Question1 question2 question3"
+    "question4 question5 question6"
+    "question7 question8 question9";
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 180px;
+}
+@keyframes glowOnDown {
+  0% {
+    text-shadow: none;
+  }
+  100% {
+    color: white;
+    text-shadow: 0px 0px 50px white;
+  }
+}
+.question:hover {
+  box-shadow: 0px 4px 4px 0px black;
+  border: none;
+  border-radius: 13px;
+  animation-name: glowOnDown;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.question {
+  background-color: #464866;
+  border-radius: 14px;
+  border: 6px solid rgba(0, 0, 0, 0.174);
+}
+.topics {
+  font-weight: 100px;
+
+  margin-top: 100px;
+}
+.Question1 {
+  grid-area: Question1;
+
+  cursor: pointer;
+}
+.question2 {
+  grid-area: question2;
+
+  cursor: pointer;
+}
+.question3 {
+  grid-area: question3;
+
+  cursor: pointer;
+}
+.question4 {
+  grid-area: question4;
+
+  cursor: pointer;
+}
+.question5 {
+  grid-area: question5;
+
+  cursor: pointer;
+}
+.question6 {
+  grid-area: question6;
+
+  cursor: pointer;
+}
+.question7 {
+  grid-area: question7;
+
+  cursor: pointer;
+}
+.question8 {
+  grid-area: question8;
+
+  cursor: pointer;
+}
+.question9 {
+  grid-area: question9;
+  cursor: pointer;
+}
+/*the question div that pops up when clicking on topics in the 9 squares grid*/
+.hidden-question-div {
+  display: none;
+  text-align: center;
+  margin-top: 17%;
+  color: white;
+  font-size: 70px;
+}
+#submitButton {
+  background-color: black;
+  color: white;
+  border: solid lime;
+  border-radius: 20%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#submitButton:hover {
+  background-color: lime;
+  border: solid black;
+  color: black;
+}
+.color-green {
+  background-color: rgba(2, 156, 2, 0.492);
+  color: white;
+}
+.color-red {
+  background-color: rgba(176, 1, 1, 0.402);
+  color: white;
+}
+/*score section*/
+.score-container {
+  text-align: center;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.score-itself-container {
+  background-color: black;
+  box-shadow: 4px 4px 100px #2e9cca;
+  color: white;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+.score-itself {
+  background-color: rgba(67, 134, 220, 0.501);
+  box-shadow: 4px 4px 100px white;
+  position: relative;
+  font-size: 40px;
+  top: 38%;
+  border-radius: 7%;
+}
+.score-text {
+  color: white;
+  font-size: 55px;
+  text-shadow: 4px 4px 4px #2e9cca;
+}
+/*animations*/
+@keyframes scoreAni {
+  0% {
+    font-size: 10px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    font-size: 120px;
+  }
+}
+.score-plus-animation {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 10;
+  right: 20%;
+
+  display: none;
+}
+.score-ani {
+  animation-name: scoreAni;
+  animation-duration: 2s;
+}
+@keyframes flashColors {
+  0% {
+    background-color: orange;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: orange;
+  }
+}
+.flashingColors {
+  animation-name: flashColors;
+  animation-duration: 0.2s;
+  animation-iteration-count: 6;
+}
+.flashingColorsEnd {
+  animation-name: flashColors;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bonusAni {
+  0% {
+    font-size: 10px;
+    opacity: 1;
+    color: white;
+  }
+  50% {
+    color: red;
+    opacity: 0.5;
+  }
+  100% {
+    color: yellow;
+    opacity: 0;
+    font-size: 120px;
+  }
+}
+.bonus-plus-animation {
+  animation-name: bonusAni;
+  animation-duration: 1s;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 200px;
+  right: 50px;
+
+  display: none;
+}
+@keyframes questionFade {
+  0% {
+    background-color: #464866;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.questionAnimation {
+  animation-name: questionFade;
+  animation-duration: 2s;
+  border-radius: 20px;
+}
